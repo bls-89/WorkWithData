@@ -1,0 +1,35 @@
+1)Функция для вычисления площади и периметра квадрата:
+
+def square_properties(side_length):
+    area = side_length ** 2
+    perimeter = 4 * side_length
+    print(f"Площадь квадрата: {area}")
+    print(f"Периметр квадрата: {perimeter}")
+
+2)Функция для вычисления суммы квадратов двух чисел:
+
+def sum_of_squares(num1, num2):
+    squared = num1**2 + num2**2
+    return squared
+
+3)Функция для получения списка в обратном порядке:
+
+def reverse_list(input_list):
+    new_list = input_list[::-1]
+    return new_list
+
+4) Функция для подсчета количества мужчин или женщин в списке:
+
+
+def count_gender(gender):
+    count = new_list.count(gender)
+    print(f"Количество {gender}: {count}")
+
+
+вызов: count_gender("female") или count_gender("male")
+
+5) Функция для создания словаря из строки:
+
+def string_to_dict(input_string):
+    char_dict = {char: input_string.count(char) for char in input_string}
+    return char_dict
