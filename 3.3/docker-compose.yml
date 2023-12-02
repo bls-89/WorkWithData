@@ -1,0 +1,18 @@
+version: latest #версия compose-file
+services: #сервисы для которых будут созадваться контейнеры
+  db: #база данных
+    image: postgres:latest #образ, который будет использован для контейнера с базой данных
+    ports: #порты у контейнера
+      - 5432:5432
+    environment : # окружение - параметры будущей базы данных в контейнере
+      POSTGRES_USER: postgres #пользлователь
+      POSTGRES_PASSWORD: password #пароль
+      POSTGRES_DB: test #имя базы даных
+    volumes:
+      - ./volume:/var/lib/postgresql/data #том для сохранения изменений в базе
+    healthcheck : #проверка что сервис db живой
+      test: ["CMD","pg_isready", "-d", "test", "-U", "postgres"]
+      interval: 5s
+      retries: 5
+    restart: always
+  
