@@ -1,0 +1,8 @@
+{
+    "URL_API": "http://api.exchangerate.host/live",
+    "access_key": "1731467954af1a70db43b92e62e2e131",
+    "conn_name": "conn1",
+    "currencies": "RUB",
+    "format": 1,
+    "source": "BTC"
+}
